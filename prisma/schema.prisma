@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model codeTagActivoFijo {
+  id Int @id @default(autoincrement())
+  instalacion String
+  edificio String
+  emplazamiento String
+  atiende String
+  servicio String
+  clasificacion String
+  conRequisito String
+  nivelOperacional String
+  sistema String
+  activoFijo String
+  subActivoFijo String
+  componente String
+  proveedorServicio String
+  // auxiliar String?
+  correlativo String
+  codeActivo String 
+  userCreater String
+  createAt DateTime @default(now())
+}
+
+
+
+
