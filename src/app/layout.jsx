@@ -2,7 +2,7 @@ import "./globals.css";
 import Navigation from "./components/Navigation/Navigation";
 
 export const metadata = {
-  title: "System Copilot",
+  title: "Copilot System",
   description: "Genera TAG, filtra TAG, Industria 4.0",
   lang: "es"
 };

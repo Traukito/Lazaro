@@ -314,6 +314,9 @@ const ContenedorGeneraTag = () => {
                 <option className={twClass.inputOption} value="cnkDvnV">
                 Sala de máquinas SurPoniente piso -1 
                 </option>
+                <option className={twClass.inputOption} value="&Sk!S.S">
+                Sala de máquinas Oriente piso -1 (ala Sur, hacia a Rancagua) 
+                </option>
                 <option className={twClass.inputOption} value="7pme1a9">
                 Sala de máquinas NorOriente piso 1 (acceso peatonal Infante)
                 </option>
@@ -575,6 +578,15 @@ const ContenedorGeneraTag = () => {
                 <option className={twClass.inputOption} value="f$s4Tjg">
                 Edificio Sur
                 </option>
+                <option className={twClass.inputOption} value="&xv0/ve">
+                Edificio Ciclotrón
+                </option>
+                <option className={twClass.inputOption} value="zZI20g#">
+                Edificio Oriente
+                </option>
+                <option className={twClass.inputOption} value="Nc9-YLU">
+                Edificio Poniente
+                </option>
                 <option className={twClass.inputOption} value="bLE0zrG">
                 Edificio Poniente y Oriente
                 </option>
@@ -737,8 +749,11 @@ const ContenedorGeneraTag = () => {
                 value={selectedClasificacion} // Establecer el valor seleccionado
                 onChange={(e) => setSelectedClasificacion(e.target.value)} // Actualizar el estado cuando cambie
               >
-                <option className="" value="QnNm$">
-                  Infraestructura e instalaciones
+                <option className={twClass.inputOption} value="QnNm$">
+                Equipamiento en las instalaciones
+                </option>
+                <option className={twClass.inputOption} value="E|z5l">
+                Infraestructura física
                 </option>
                 <option className={twClass.inputOption} value="L$O59">
                   Equipamiento biomédico
@@ -869,7 +884,7 @@ const ContenedorGeneraTag = () => {
                   Transporte vertical
                 </option>
                 <option className={twClass.inputOption} value="4v-zW|">
-                  Detección y mitigación de incendios
+                  Detección y mitigación de incendios (SEI)
                 </option>
                 <option className={twClass.inputOption} value="W-Ex|P">
                 Almacenamiento, impulsión y distribución de agua potable
@@ -1079,7 +1094,16 @@ const ContenedorGeneraTag = () => {
                   Pull station (palanca de amergencia)
                 </option>
                 <option className={twClass.inputOption} value="EHD8&.Y">
-                  Audio de evacuación
+                  Parlante para audio de evacuación
+                </option>
+                <option className={twClass.inputOption} value="$!faM8p">
+                  Luz Stroboscópica
+                </option>
+                <option className={twClass.inputOption} value="wU0N#7u">
+                  Sensor de humo
+                </option>
+                <option className={twClass.inputOption} value="w.seV7D">
+                  Sprinker (rociador)
                 </option>
                 
 
@@ -1161,7 +1185,11 @@ const ContenedorGeneraTag = () => {
                 <option className={twClass.inputOption} value="c#$51ED">
                 Manómetro de temperatura
                 </option>
-                <optgroup label="" className="my-3 py-3"></optgroup>
+
+                <optgroup label="ELÉCTRICOS" className="my-3 py-3"></optgroup>
+                <option className={twClass.inputOption} value="3XMY|MF">
+                Variador de frecuencia (VDF)
+                </option>
               </select>
 
               <div className="flex justify-between">
@@ -1279,6 +1307,8 @@ const ContenedorGeneraTag = () => {
             </div>
           )}
 
+          
+
           {showProveedorServicios && (
             <div className="mx-1 my-2 flex flex-col border rounded-xl">
               <label className="ml-5 mt-4 mb-4 italic text-xl">
@@ -1326,6 +1356,12 @@ const ContenedorGeneraTag = () => {
                 </option>
                 <option className={twClass.inputOption} value="5#31Y">
                 Instaplan
+                </option>
+                <option className={twClass.inputOption} value="6C9&&">
+                Electro Power
+                </option>
+                <option className={twClass.inputOption} value="w6SR-">
+                Diperk
                 </option>
                 <option className={twClass.inputOption} value="G2$gq">
                 Apolo Spa (extintores)

@@ -5,13 +5,23 @@ export  const linksNavBar = [
     //   description: ''
     // },
     {
-      item: 'Generate',
+      item: 'IA Gen',
+      route: './',
+      description: ''
+    },
+    {
+      item: 'Tag',
       route: './generaTag',
       description: ''
     },
     {
-      item: 'Planta',
+      item: 'Ordenes',
       route: './statusEquipos',
+      description: ''
+    },
+    {
+      item: 'Proveedores',
+      route: './',
       description: ''
     },
     {
