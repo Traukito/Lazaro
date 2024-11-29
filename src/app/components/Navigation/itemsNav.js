@@ -10,18 +10,13 @@ export  const linksNavBar = [
       description: ''
     },
     {
-      item: 'Tag',
+      item: 'TAG',
       route: './generaTag',
       description: ''
     },
     {
-      item: 'Ordenes',
+      item: 'OT',
       route: './statusEquipos',
-      description: ''
-    },
-    {
-      item: 'Proveedores',
-      route: './',
       description: ''
     },
     {

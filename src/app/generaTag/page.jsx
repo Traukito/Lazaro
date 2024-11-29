@@ -1,6 +1,6 @@
 import ContenedorGeneraTag from "../components/generaTagComponent/ContenedorGeneraTag";
 
-export const metadata = { title: "Generando TAG" };
+export const metadata = { title: "Generar TAG" };
 
 const generaTag = () => {
   return (

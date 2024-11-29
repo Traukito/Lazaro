@@ -1,4 +1,3 @@
-
 export function generateNonce(length) {
     let result = "";
     let characters =

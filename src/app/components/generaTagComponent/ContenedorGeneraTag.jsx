@@ -100,21 +100,21 @@ const ContenedorGeneraTag = () => {
 
     setCodeState(
       selectedInstalacion +
-        selectedEdificio +
-        selectedEmplazamiento +
-        selectedAtiende +
-        selectedServicio +
-        selectedClasificacion +
-        selectedRequisito +
-        selectedNivelOperacional +
-        selectedSistema +
-        selectedActivo +
-        selectedSubActivo +
-        selectedComponente +
-        selectedProveedorServicios +
-        nonceGenerated
+      selectedEdificio +
+      selectedEmplazamiento +
+      selectedAtiende +
+      selectedServicio +
+      selectedClasificacion +
+      selectedRequisito +
+      selectedNivelOperacional +
+      selectedSistema +
+      selectedActivo +
+      selectedSubActivo +
+      selectedComponente +
+      selectedProveedorServicios +
+      nonceGenerated
     );
-   
+
     const data = {
       instalacion: selectedInstalacion,
       edificio: selectedEdificio,
@@ -170,20 +170,25 @@ const ContenedorGeneraTag = () => {
 
     } catch (error) {
       console.error("Error al enviar datos:", error);
-    } 
-  
+    }
+
   };
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2">
+    {/* <div className="bg-red-400 "> */}
+
       <div className="flex flex-col gap-5">
+      {/* <div className="p-1 gap-2 md:flex md:flex-row md:justify-around bg-black"> */}
+
         <form onSubmit={handlerSubmit}>
-
-
 
           {showInstalacion && (
             <div className="mx-1 my-2 flex flex-col border rounded-xl">
-              <label className="ml-5 mt-4 mb-4 italic text-xl">
+            {/* <div className="md:h-full md:min-w-max border rounded-xl bg-amber-500"> */}
+
+
+              <label className="max-w-max ml-5 mt-4 mb-4 italic text-xl">
                 Instalación
               </label>
               <select
@@ -283,7 +288,7 @@ const ContenedorGeneraTag = () => {
               >
                 <optgroup label="TECHUMBRES" className="my-3 py-3"></optgroup>
                 <option className={twClass.inputOption} value="5oP3j4I">
-                Techumbre azotea Nor Oriente Piso 6
+                  Techumbre azotea Nor Oriente Piso 6
                 </option>
                 <option className={twClass.inputOption} value="qzGZCeD">
                   Techumbre azotea Nor Poniente. Piso 6
@@ -298,176 +303,177 @@ const ContenedorGeneraTag = () => {
                   Techumbre edificio Poniente, piso 2
                 </option>
                 <option className={twClass.inputOption} value="vmktmUm">
-                Entre techumbre (pasillo mecánico) edificio SurPoniente (piso 1 1/2)
+                  Entre techumbre (pasillo mecánico) edificio SurPoniente (piso 1 1/2)
                 </option>
                 <option className={twClass.inputOption} value="DPqbRSX">
-                Entre techumbre (pasillo mecánico) edificio NorPoniente (piso 1 1/2)
+                  Entre techumbre (pasillo mecánico) edificio NorPoniente (piso 1 1/2)
                 </option>
                 <option className={twClass.inputOption} value="SixIEwo">
-                Techumbre SurOriente piso 1 (sobre RT, por constructora)
+                  Techumbre SurOriente piso 1 (sobre RT, por constructora)
                 </option>
 
                 <optgroup label="SALAS DE MÁQUINAS" className="my-3 py-3" ></optgroup>
                 <option className={twClass.inputOption} value="b0fBgj9">
-                Sala de máquinas NorPoniente piso 1
+                  Sala de máquinas NorPoniente piso 1
                 </option>
                 <option className={twClass.inputOption} value="cnkDvnV">
-                Sala de máquinas SurPoniente piso -1 
+                  Sala de máquinas SurPoniente piso -1
                 </option>
                 <option className={twClass.inputOption} value="&Sk!S.S">
-                Sala de máquinas Oriente piso -1 (ala Sur, hacia a Rancagua) 
+                  Sala de máquinas Oriente piso -1 (ala Sur, hacia a Rancagua)
                 </option>
                 <option className={twClass.inputOption} value="7pme1a9">
-                Sala de máquinas NorOriente piso 1 (acceso peatonal Infante)
+                  Sala de máquinas NorOriente piso 1 (acceso peatonal Infante)
                 </option>
                 <option className={twClass.inputOption} value="g-fV1rR">
-                Sala de máquinas Oriente piso -2 (sala ascensor)
+                  Sala de máquinas Oriente piso -2 (sala ascensor)
                 </option>
-                 <option className={twClass.inputOption} value="d52yieV">
-                Sala de máquinas NorPoniente azotea piso 6 (ascensores)
+                <option className={twClass.inputOption} value="d52yieV">
+                  Sala de máquinas NorPoniente azotea piso 6 (ascensores)
                 </option>
-                <option className={twClass.inputOption} value="kMXz2ia">
-                Sala de bombas Norte piso -6
-                </option>
+                {/* Se movio al módulo de equipos (antes de los subEquipos) */}
+                {/* <option className={twClass.inputOption} value="kMXz2ia">
+                  Sala de bombas Norte piso -6
+                </option> */}
                 <option className={twClass.inputOption} value="0n0rlsF">
-                Sala de máquinas Ciclotrón
+                  Sala de máquinas Ciclotrón
                 </option>
                 <option className={twClass.inputOption} value="&AZh.-F">
-                Sala de bombas Norte, piso -6
+                  Sala de bombas Norte, piso -6
                 </option>
                 <option className={twClass.inputOption} value="OM.yxhQ">
-                Patio Inglés
+                  Patio Inglés
                 </option>
                 <option className={twClass.inputOption} value="vFbV#SA">
-                Central de gases clínicos (piso 1, edificio Poniente)
+                  Central de gases clínicos (piso 1, edificio Poniente)
                 </option>
                 <option className={twClass.inputOption} value="">
-                Piso 1, edificio Poniente lado Sur (entrada autos Av. Rancagua)
+                  Piso 1, edificio Poniente lado Sur (entrada autos Av. Rancagua)
                 </option>
 
 
                 <optgroup label="SHAFT" className="my-3 py-3"></optgroup>
                 <option className={twClass.inputOption} value="xwU3x1o">
-                Shaft Nor Oriente piso 1
+                  Shaft Nor Oriente piso 1
                 </option>
                 <option className={twClass.inputOption} value="REquaU3">
-                Shaft Nor Oriente piso 2
+                  Shaft Nor Oriente piso 2
                 </option>
                 <option className={twClass.inputOption} value="Je2Fc2H">
-                Shaft Nor Oriente piso 3
+                  Shaft Nor Oriente piso 3
                 </option>
                 <option className={twClass.inputOption} value="bwBVzsr">
-                Shaft Nor Oriente piso 4
+                  Shaft Nor Oriente piso 4
                 </option>
                 <option className={twClass.inputOption} value="nMJswV4">
-                Shaft Nor Oriente piso 5
+                  Shaft Nor Oriente piso 5
                 </option>
                 <option className={twClass.inputOption} value="hHojwJD">
-                Shaft Nor Poniente piso 2
+                  Shaft Nor Poniente piso 2
                 </option>
                 <option className={twClass.inputOption} value="2G1Urij">
-                Shaft Nor Poniente piso 3
+                  Shaft Nor Poniente piso 3
                 </option>
                 <option className={twClass.inputOption} value="GPKGlMt">
-                Shaft Nor Poniente piso 4
+                  Shaft Nor Poniente piso 4
                 </option>
                 <option className={twClass.inputOption} value="i2wnuy0">
-                Shaft Nor Poniente piso 5
+                  Shaft Nor Poniente piso 5
                 </option>
 
                 <optgroup label="EDIFICIOS Y NIVELES" className="my-3 py-3"></optgroup>
                 <option className={twClass.inputOption} value="80lSjYO">
-                Norte piso -6
+                  Norte piso -6
                 </option>
                 <option className={twClass.inputOption} value="MqgqHNH">
-                Norte piso -5
+                  Norte piso -5
                 </option>
                 <option className={twClass.inputOption} value="Sv2wtPF">
-                Norte piso -4
+                  Norte piso -4
                 </option>
                 <option className={twClass.inputOption} value="6gTv0Ev">
-                Norte piso -3
+                  Norte piso -3
                 </option>
                 <option className={twClass.inputOption} value="irsFZgZ">
-                Norte piso -2
+                  Norte piso -2
                 </option>
                 <option className={twClass.inputOption} value="GpSXqsn">
-                Norte piso -1
+                  Norte piso -1
                 </option>
                 <option className={twClass.inputOption} value="RNe59E1">
-                Norte piso 1
+                  Norte piso 1
                 </option>
                 <option className={twClass.inputOption} value="fTm3T8z">
-                Norte piso 2
+                  Norte piso 2
                 </option>
                 <option className={twClass.inputOption} value="zU50gly">
-                Norte piso 3
+                  Norte piso 3
                 </option>
                 <option className={twClass.inputOption} value="C2RKqH5">
-                Norte piso 4
+                  Norte piso 4
                 </option>
                 <option className={twClass.inputOption} value="7NARJAa">
-                Norte piso 5
+                  Norte piso 5
                 </option>
                 <option className={twClass.inputOption} value="E84wwaK">
-                Norte piso 6
+                  Norte piso 6
                 </option>
 
                 <option className={twClass.inputOption} value="Yw6WjFQ">
-                Oriente piso -3
+                  Oriente piso -3
                 </option>
                 <option className={twClass.inputOption} value="1BJOpEk">
-                Oriente piso -2
+                  Oriente piso -2
                 </option>
                 <option className={twClass.inputOption} value="JZm3v6a">
-                Oriente piso -1
+                  Oriente piso -1
                 </option>
                 <option className={twClass.inputOption} value="3gmnZQa">
-                Oriente piso 1
+                  Oriente piso 1
                 </option>
                 <option className={twClass.inputOption} value="oZrPJp6">
-                Oriente piso 2
+                  Oriente piso 2
                 </option>
                 <option className={twClass.inputOption} value="f43uRCh">
-                Oriente piso 3
+                  Oriente piso 3
                 </option>
                 <option className={twClass.inputOption} value="7uyCAbs">
-                Oriente piso 4
+                  Oriente piso 4
                 </option>
                 <option className={twClass.inputOption} value="ejhLyNI">
-                Poniente piso 1
+                  Poniente piso 1
                 </option>
                 <option className={twClass.inputOption} value="s3AhI4P">
-                Poniente piso 2
+                  Poniente piso 2
                 </option>
                 <option className={twClass.inputOption} value="oGJSpM5">
-                Poniente piso 3
+                  Poniente piso 3
                 </option>
                 <option className={twClass.inputOption} value="0f7x#Nf">
-                Poniente piso -1
+                  Poniente piso -1
                 </option>
                 <option className={twClass.inputOption} value="OzDNe.U">
-                Poniente piso -2
+                  Poniente piso -2
                 </option>
                 <option className={twClass.inputOption} value="tmv|hsQ">
-                Poniente piso -3
+                  Poniente piso -3
                 </option>
                 <option className={twClass.inputOption} value="kND6W65">
-                Ciclotrón subterráneo 3
+                  Ciclotrón subterráneo 3
                 </option>
                 <option className={twClass.inputOption} value="YGJWCDU">
-                Ciclotrón subterráneo 2
+                  Ciclotrón subterráneo 2
                 </option>
                 <option className={twClass.inputOption} value="3ghr1v3">
-                Ciclotrón subterráneo 1
+                  Ciclotrón subterráneo 1
                 </option>
                 <option className={twClass.inputOption} value="CI8vmlQ">
-                Ciclotrón piso 1
+                  Ciclotrón piso 1
                 </option>
                 <option className={twClass.inputOption} value="e3W4uPj">
-                En parte de un edificio
+                  En parte de un edificio
                 </option><option className={twClass.inputOption} value="1.I..|R">
-                En el edificio completo
+                  En el edificio completo
                 </option>
               </select>
 
@@ -510,91 +516,91 @@ const ContenedorGeneraTag = () => {
                   Quinto piso
                 </option>
                 <option className={twClass.inputOption} value="n&cNA">
-                Cuarto piso
+                  Cuarto piso
                 </option>
                 <option className={twClass.inputOption} value="i#Led">
-                Tercer piso
+                  Tercer piso
                 </option>
                 <option className={twClass.inputOption} value="EcZTI">
-                Segundo piso
+                  Segundo piso
                 </option>
                 <option className={twClass.inputOption} value="W9A8L">
-                Primer piso
+                  Primer piso
                 </option>
                 <option className={twClass.inputOption} value="mB8Ur">
-                Entre pisos
+                  Entre pisos
                 </option>
                 <option className={twClass.inputOption} value="SDR5g">
-                Subterráneo 1
+                  Subterráneo 1
                 </option>
                 <option className={twClass.inputOption} value="d6Vjs">
-                Subterráneo 2
+                  Subterráneo 2
                 </option>
                 <option className={twClass.inputOption} value="7IbeY">
-                Subterráneo 3
+                  Subterráneo 3
                 </option>
                 <option className={twClass.inputOption} value="r#y5A">
-                Subterráneo 4
+                  Subterráneo 4
                 </option>
                 <option className={twClass.inputOption} value="CgTmg">
-                Subterráneo 5
+                  Subterráneo 5
                 </option>
                 <option className={twClass.inputOption} value="cOEGz">
-                Subterráneo 6
+                  Subterráneo 6
                 </option>
                 <option className={twClass.inputOption} value="9YjaP">
-                Azotea
+                  Azotea
                 </option>
                 <option className={twClass.inputOption} value="RzCPh">
-                Estacionamiento -2
+                  Estacionamiento -2
                 </option>
                 <option className={twClass.inputOption} value="uM$pt">
-                Estacionamiento -3
+                  Estacionamiento -3
                 </option>
                 <option className={twClass.inputOption} value="JtXxL">
-                Estacionamiento -4
+                  Estacionamiento -4
                 </option>
                 <option className={twClass.inputOption} value="lPub#">
-                Estacionamiento -5
+                  Estacionamiento -5
                 </option>
                 <option className={twClass.inputOption} value="zvwdM">
-                Estacionamiento -6
+                  Estacionamiento -6
                 </option>
-                <option className={twClass.inputOption} value="OSXd&1X">
-               Algunos sectores del piso
+                <option className={twClass.inputOption} value="OSXd&">
+                  Algunos sectores del piso
                 </option>
-                <option className={twClass.inputOption} value=".2b87N6">
-               Todos los sectores del piso
+                <option className={twClass.inputOption} value=".2b87">
+                  Todos los sectores del piso
                 </option>
-                  <option className={twClass.inputOption} value="Wv1CE">
-                Una proporción de los pisos del edificio
+                <option className={twClass.inputOption} value="Wv1CE">
+                  Una proporción de los pisos del edificio
                 </option>
-                <option className={twClass.inputOption} value="8RGpfU0">
-                Todos los pisos del edificio
+                <option className={twClass.inputOption} value="8RGpf"> {/*se quitaron 2 caracteres*/}
+                  Todos los pisos del edificio
                 </option>
-                <option className={twClass.inputOption} value="uBbWJ3D">
-                Edificio Norte
+                <option className={twClass.inputOption} value="uBbWJ"> {/*se quitaron 2 caracteres*/}
+                  Edificio Norte
                 </option>
-                <option className={twClass.inputOption} value="f$s4Tjg">
-                Edificio Sur
+                <option className={twClass.inputOption} value="f$s4T"> {/*se quitaron 2 caracteres*/}
+                  Edificio Sur
                 </option>
-                <option className={twClass.inputOption} value="&xv0/ve">
-                Edificio Ciclotrón
+                <option className={twClass.inputOption} value="&xv0/"> {/*se quitaron 2 caracteres*/}
+                  Edificio Ciclotrón
                 </option>
-                <option className={twClass.inputOption} value="zZI20g#">
-                Edificio Oriente
+                <option className={twClass.inputOption} value="zZI20"> {/*se quitaron 2 caracteres*/}
+                  Edificio Oriente
                 </option>
-                <option className={twClass.inputOption} value="Nc9-YLU">
-                Edificio Poniente
+                <option className={twClass.inputOption} value="Nc9-Y"> {/*se quitaron 2 caracteres*/}
+                  Edificio Poniente
                 </option>
-                <option className={twClass.inputOption} value="bLE0zrG">
-                Edificio Poniente y Oriente
+                <option className={twClass.inputOption} value="bLE0z"> {/*se quitaron 2 caracteres*/}
+                  Edificio Poniente y Oriente
                 </option>
-                <option className={twClass.inputOption} value="b&E!Jcb">
-                Grupo de edificios
+                <option className={twClass.inputOption} value="b&E!J"> {/*se quitaron 2 caracteres*/}
+                  Grupo de edificios
                 </option>
-                <option className={twClass.inputOption} value="FDM&o1G">
-                Todos los pisos y a todos los edificios
+                <option className={twClass.inputOption} value="FDM&o"> {/*se quitaron 2 caracteres*/}
+                  Todos los pisos y a todos los edificios
                 </option>
               </select>
 
@@ -617,8 +623,8 @@ const ContenedorGeneraTag = () => {
 
 
 
- 
-      {showServicio && (
+
+          {showServicio && (
             <div className="mx-1 my-2 flex flex-col border rounded-xl">
               <label className="ml-5 mt-4 mb-4 italic text-xl">
                 Servicio, Unidad, Departamento, etc.
@@ -638,83 +644,86 @@ const ContenedorGeneraTag = () => {
                 <option className={twClass.inputOption} value="erZM$$z">
                   Pabellón
                 </option>
+                <option className={twClass.inputOption} value="1ev!1&6">
+                  Recuperación Pabellón
+                </option>
                 <option className={twClass.inputOption} value="VUAuJzF">
-                Sala de biopsia rápida
+                  Sala de biopsia rápida
                 </option>
                 <option className={twClass.inputOption} value="lgrH0ob">
-                Baño funcionarios
+                  Baño funcionarios
                 </option>
                 <option className={twClass.inputOption} value="Q72D6CD">
-                Módulo secretaria y Enfermera Jefe
+                  Módulo secretaria y Enfermera Jefe
                 </option>
                 <option className={twClass.inputOption} value="fuZV1m3">
-                Unidad de cuidados intensivos (UCI)
+                  Unidad de cuidados intensivos (UCI)
                 </option>
                 <option className={twClass.inputOption} value="5i0WS85">
-                Unidad de terapia intensiva (UTI)
+                  Unidad de terapia intensiva (UTI)
                 </option>
                 <option className={twClass.inputOption} value="#8quLO6">
-                Médico Quirúrgico 
+                  Médico Quirúrgico
                 </option>
                 <option className={twClass.inputOption} value="Dc$KpL$">
-                Quimioterapia
+                  Quimioterapia
                 </option>
                 <option className={twClass.inputOption} value="XYsRS$9">
-               Cardiología
+                  Cardiología
                 </option>
                 <option className={twClass.inputOption} value="JKHG6Jl">
-                Auditorio
+                  Auditorio
                 </option>
                 <option className={twClass.inputOption} value="6SIvjmG">
-                Radio terapia avanzada
+                  Radio terapia avanzada
                 </option>
                 <option className={twClass.inputOption} value="eLp4R9p">
-                UPO
+                  UPO
                 </option>
                 <option className={twClass.inputOption} value="Suu1CnL">
-                UPI
+                  UPI
                 </option>
                 <option className={twClass.inputOption} value="rIZY68K">
-                UPOR
+                  UPOR
                 </option>
                 <option className={twClass.inputOption} value="hmD9vcW">
-                Radio farmacia
+                  Radio farmacia
                 </option>
                 <option className={twClass.inputOption} value="Vxetesh">
-                Ciclotrón
+                  Ciclotrón
                 </option>
                 <option className={twClass.inputOption} value="XQHQhBp">
-                Consultas médicas / Centro médico
+                  Consultas médicas / Centro médico
                 </option>
                 <option className={twClass.inputOption} value="$aHk6XA">
-                Admisión
+                  Admisión
                 </option>
                 <option className={twClass.inputOption} value="mk60qdd">
-                Estacionamiento
+                  Estacionamiento
                 </option>
                 <option className={twClass.inputOption} value="UyqITdD">
-                Ex plataforma
+                  Ex plataforma
                 </option>
                 <option className={twClass.inputOption} value="qG&eZrF">
-                Algunos servicios del piso
+                  Algunos servicios del piso
                 </option>
                 <option className={twClass.inputOption} value="LUv-Vqw">
-                Todo el piso
+                  Todo el piso
                 </option>
                 <option className={twClass.inputOption} value="OQA0B&i">
-                Una proporción de las unidades del edificio
+                  Una proporción de las unidades del edificio
                 </option>
                 <option className={twClass.inputOption} value="9KcxGCT">
-                Todas las unidades de un edificio 
+                  Todas las unidades de un edificio
                 </option>
                 <option className={twClass.inputOption} value="i7de|!W">
-                Grupo de servicios de diferentes edificios
+                  Grupo de servicios de diferentes edificios
                 </option>
                 <option className={twClass.inputOption} value="nONprr#">
-                Grupo de edificios
+                  Grupo de edificios
                 </option>
                 <option className={twClass.inputOption} value="NsCNe6Q">
-                Todas las unidades de la instalación y de los edificios
+                  Todas las unidades de la instalación y de los edificios
                 </option>
               </select>
 
@@ -750,15 +759,15 @@ const ContenedorGeneraTag = () => {
                 onChange={(e) => setSelectedClasificacion(e.target.value)} // Actualizar el estado cuando cambie
               >
                 <option className={twClass.inputOption} value="QnNm$">
-                Equipamiento en las instalaciones
+                  Equipamiento en las instalaciones
                 </option>
                 <option className={twClass.inputOption} value="E|z5l">
-                Infraestructura física
+                  Infraestructura física
                 </option>
                 <option className={twClass.inputOption} value="L$O59">
                   Equipamiento biomédico
                 </option>
-                <option className={twClass.inputOption} value="elROa"> 
+                <option className={twClass.inputOption} value="elROa">
                   Transporte (camionetas, vans, etc)
                 </option>
               </select>
@@ -795,7 +804,7 @@ const ContenedorGeneraTag = () => {
                   Sin requisitos
                 </option>
                 <option className={twClass.inputOption} value="KV|2x">
-                  Acreditable 
+                  Acreditable
                 </option>
                 <option className={twClass.inputOption} value="Tumg-">
                   Certificable
@@ -877,7 +886,7 @@ const ContenedorGeneraTag = () => {
 
                 onChange={(e) => setSelectedSistema(e.target.value)} // Actualizar el estado cuando cambie
               >
-                 <option className={twClass.inputOption} value="Y-k$$G">
+                <option className={twClass.inputOption} value="Y-k$$G">
                   No aplica
                 </option>
                 <option className={twClass.inputOption} value="i.&Z!j">
@@ -887,27 +896,27 @@ const ContenedorGeneraTag = () => {
                   Detección y mitigación de incendios (SEI)
                 </option>
                 <option className={twClass.inputOption} value="W-Ex|P">
-                Almacenamiento, impulsión y distribución de agua potable
+                  Almacenamiento, impulsión y distribución de agua potable
                 </option>
                 <option className={twClass.inputOption} value="k.bq|h">
-                Respaldo energético
+                  Respaldo energético
                 </option>
                 <option className={twClass.inputOption} value="&k&FK$">
-                Alcantarillados
+                  Alcantarillados
                 </option>  <option className={twClass.inputOption} value="N9eSGy">
-                Vigilancia e intrusión
+                  Vigilancia e intrusión
                 </option>
                 <option className={twClass.inputOption} value="ja-.|P">
-                Climatización y/o refrigeración
+                  Climatización y/o refrigeración
                 </option>
-                <option className={twClass.inputOption} value="3-HimDD">
-                Gases clínicos
+                <option className={twClass.inputOption} value="3-HimD"> {/*se le quitó 1 caracter*/}
+                  Gases clínicos
                 </option>
                 <option className={twClass.inputOption} value="|A-ko1">
-                SCC
+                  SCC
                 </option>
                 <option className={twClass.inputOption} value="T8|S-T">
-                SAC
+                  SAC
                 </option>
               </select>
 
@@ -945,7 +954,7 @@ const ContenedorGeneraTag = () => {
                   Grupo electrógeno
                 </option>
                 <option className={twClass.inputOption} value="PNGRXLj">
-                Tableros eléctricos (fuerza y control, transferencia, bco condensadores, etc)
+                  Tableros eléctricos (fuerza y control, transferencia, bco condensadores, etc)
                 </option>
                 <option className={twClass.inputOption} value="wg!e&kV">
                   Iluminación de emergencia (lazo)
@@ -957,127 +966,132 @@ const ContenedorGeneraTag = () => {
                   Compresor de aire
                 </option>
                 <option className={twClass.inputOption} value="VKNHWf6">
-                Compresor vacío medicinal
+                  Compresor vacío medicinal
                 </option>
                 <option className={twClass.inputOption} value="YW1WE2H">
-                Compresor de N2O
+                  Compresor de N2O
                 </option>
                 <option className={twClass.inputOption} value="RXfuw1S">
-                Central de O2
+                  Central de O2
                 </option>
                 <option className={twClass.inputOption} value="LwuHMOu">
-                Motobombas 
+                  Motobombas
                 </option>
                 <option className={twClass.inputOption} value="xSWvUzY">
-                Paneles solares térmicos
+                  Paneles solares térmicos
                 </option>
                 <option className={twClass.inputOption} value="KBKvs2W">
-                Planta de tratamiento de agua (osmósis inversa)
+                  Planta de tratamiento de agua (osmósis inversa)
                 </option>
                 <option className={twClass.inputOption} value="LtUSMCg">
-                Estanque recirculador de agua potable
+                  Estanque recirculador de agua potable
                 </option>
                 <option className={twClass.inputOption} value="NQr5GnM">
-                Estanque de expasión
+                  Estanque de expasión
                 </option>
                 <option className={twClass.inputOption} value="#ZwU1-i">
-                Estanque acumulador de agua (boiler)
+                  Estanque acumulador de agua (boiler)
                 </option>
+                <option className={twClass.inputOption} value="cJ.Ff!d">
+                  Lazo para control de nivel (variable de proceso)
+                </option>
+
+
 
                 <optgroup label="CLIMATIZACIÓN" className="my-3 py-3"></optgroup>
                 <option className={twClass.inputOption} value="AnsLtod">
-                Chiller
+                  Chiller
                 </option>
                 <option className={twClass.inputOption} value="IQOsjUW">
-                Unidad manejadora/tratamiento de aire (U-M/T-A)
+                  Unidad manejadora/tratamiento de aire (U-M/T-A)
                 </option>
                 <option className={twClass.inputOption} value="fi5aznK">
-                Caldera
+                  Caldera
                 </option>
                 <option className={twClass.inputOption} value="W5eJhct">
-                Boiler
+                  Boiler
                 </option>
                 <option className={twClass.inputOption} value="FmD4Xwr">
-                Equipo inverve (VRF / VRV)
+                  Equipo inverve (VRF / VRV)
                 </option>
                 <option className={twClass.inputOption} value="BXZMexH">
-                Unidad compacta
+                  Unidad compacta
                 </option>
                 <option className={twClass.inputOption} value="Fk8fbGr">
-                Heavy Duty
+                  Heavy Duty
                 </option>
                 <option className={twClass.inputOption} value="O1Nsr7a">
-                FFU
+                  FFU
                 </option>
                 <option className={twClass.inputOption} value="9dBvnlN">
-                Fan coil
+                  Fan coil
                 </option>
                 <option className={twClass.inputOption} value="whiEUll">
-                Unidadad exterior
+                  Unidadad exterior
                 </option>
                 <option className={twClass.inputOption} value="M85GbOU">
-                Split
+                  Split
                 </option>
                 <option className={twClass.inputOption} value="aqfevED">
-                Multi split
+                  Multi split
                 </option>
                 <option className={twClass.inputOption} value="OuBSV6o">
-                Multi split suelo techo
+                  Multi split suelo techo
                 </option>
                 <option className={twClass.inputOption} value="ePPhQIB">
-                Split cassette
+                  Split cassette
                 </option>
                 <option className={twClass.inputOption} value="9PHvQgW">
-                Multi split cassette
+                  Multi split cassette
                 </option>
                 <option className={twClass.inputOption} value="nLU3gw3">
-                Sistema de conducto
+                  Sistema de conducto
                 </option>
                 <option className={twClass.inputOption} value="66mPgEd">
-                Equipo de ventana
+                  Equipo de ventana
                 </option>
                 <option className={twClass.inputOption} value="zmT83Mp">
-                Roof top
+                  Roof top
                 </option>
                 <option className={twClass.inputOption} value="$10wmDK"> {/*  NUEVO PARA REPLICAR VIN INTERNO A EXTERNO (MISMO CÓDIGO LOS 2 VIN)*/}
-                VIN externo
+                  VIN externo
                 </option>
                 <option className={twClass.inputOption} value="#%5b#AE"> {/*  NUEVO PARA REPLICAR VEX INTERNO A EXTERNO (MISMO CÓDIGO LOS 2 VEX)*/}
-                VEX externo
+                  VEX externo
                 </option>
                 <option className={twClass.inputOption} value="gk6Ib9r"> {/*  NUEVO PARA REPLICAR  GPF VIN INTERNO A EXTERNO (MISMO CÓDIGO TODOS LOS GPF*/}
-                GPF externo
+                  GPF externo
                 </option>
                 <option className={twClass.inputOption} value="n8wN6XE">
-                Acumulador de agua sanitaria (boiler)
+                  Acumulador de agua sanitaria (boiler)
                 </option>
                 <option className={twClass.inputOption} value="&%eNJCu">
-                Motor base
+                  Motor base
                 </option>
-              
+
 
 
                 <optgroup label="TPTE VERTICAL" className="my-3 py-3"></optgroup>
                 <option className={twClass.inputOption} value="U3J266C">
-                Ascensor pasajeros
+                  Ascensor pasajeros
                 </option>
                 <option className={twClass.inputOption} value="D0efT18">
-                Ascensor monta camilla
+                  Ascensor monta camilla
                 </option>
                 <option className={twClass.inputOption} value="BsfPrcx">
-                Ascensor monta carga
+                  Ascensor monta carga
                 </option>
                 <option className={twClass.inputOption} value="36eMXNd">
-                Ascensor min carga
+                  Ascensor min carga
                 </option>
                 <option className={twClass.inputOption} value="qQVJAFR">
-                Escalera mecánica
+                  Escalera mecánica
                 </option>
                 <option className={twClass.inputOption} value="qvOQfFq">
-                Silla salva escaleras
+                  Silla salva escaleras
                 </option>
                 <option className={twClass.inputOption} value="2fps4yv">
-                Oruga salva escaleras
+                  Oruga salva escaleras
                 </option>
 
                 <optgroup label="SDI y SEI" className="my-3 py-3"></optgroup>
@@ -1105,7 +1119,11 @@ const ContenedorGeneraTag = () => {
                 <option className={twClass.inputOption} value="w.seV7D">
                   Sprinker (rociador)
                 </option>
-                
+                {/*Se movió aquí desde el módulo de Emplazamiento (24 de sep.)*/}
+                <option className={twClass.inputOption} value="kMXz2ia">
+                  Sala de bombas para extinción de incendio
+                </option>
+
 
 
                 <optgroup label="OTROS TIPOS" className="my-3 py-3"></optgroup>
@@ -1122,9 +1140,9 @@ const ContenedorGeneraTag = () => {
                   Mock
                 </option>
                 <optgroup label="" className="my-3 py-3"></optgroup>
-                
 
               </select>
+
 
               <div className="flex justify-between">
                 <button
@@ -1160,37 +1178,60 @@ const ContenedorGeneraTag = () => {
               >
                 <optgroup label="CLIMATIZACIÓN" className="my-3 py-3"></optgroup>
                 <option className={twClass.inputOption} value="egjdbRK">
-                No aplica
+                  No aplica
                 </option>
                 <option className={twClass.inputOption} value="3w7PO3k">
-                Gabinete Porta Filtros
+                  Gabinete Porta Filtros
                 </option>
                 <option className={twClass.inputOption} value="SOy&#5&">
-                VIN interior
+                  VIN interior
                 </option>
                 <option className={twClass.inputOption} value="J$ZN30e">
-                VEX interior
+                  VEX interior
                 </option>
                 <option className={twClass.inputOption} value="#GUHam2">
-                Quemador caldera
+                  Quemador caldera
                 </option>
                 <option className={twClass.inputOption} value="qC-$Dgx">
-                Intercambiador de calor (de placas)
+                  Intercambiador de calor (de placas)
                 </option>
 
                 <optgroup label="MEDIDORES" className="my-3 py-3"></optgroup>
                 <option className={twClass.inputOption} value="#SJfArF">
-                Manómetro de presión
+                  Manómetro de presión
                 </option>
                 <option className={twClass.inputOption} value="c#$51ED">
-                Manómetro de temperatura
+                  Manómetro de temperatura
                 </option>
 
                 <optgroup label="ELÉCTRICOS" className="my-3 py-3"></optgroup>
                 <option className={twClass.inputOption} value="3XMY|MF">
-                Variador de frecuencia (VDF)
+                  Variador de frecuencia (VDF)
                 </option>
+
+                {/*Agregado el 24 de sep 2024*/}
+                <optgroup label="OTROS" className="my-3 py-3"></optgroup>
+                <option className={twClass.inputOption} value="&|m2JlO">
+                  Válvulas, cañerías y accesorios (piping and instrumentation)
+                </option>
+                <option className={twClass.inputOption} value="0DOaW1!">
+                  Motobomba 
+                </option>
+                <option className={twClass.inputOption} value="MSSXk.c">
+                  Bomba Jockey 
+                  </option>
+                <option className={twClass.inputOption} value="&-.7mUh">
+                  TDFC
+                  </option>
+                  <option className={twClass.inputOption} value="$U3-Wp5">
+                  Servoválvula
+                  </option>
+                  <option className={twClass.inputOption} value="N/V3rH&">
+                  Estanque
+                  </option>
               </select>
+
+
 
               <div className="flex justify-between">
                 <button
@@ -1223,64 +1264,64 @@ const ContenedorGeneraTag = () => {
                 onChange={(e) => setSelectedComponente(e.target.value)} // Actualizar el estado cuando cambie
               >
                 <option className={twClass.inputOption} value="Sg9vXUo">
-                No aplica
+                  No aplica
                 </option>
                 <option className={twClass.inputOption} value="wSAac3u">
-                VDF
+                  VDF
                 </option>
                 <option className={twClass.inputOption} value="SYaOJmQ">
-                Potenciómetro
+                  Potenciómetro
                 </option>
                 <option className={twClass.inputOption} value="1ZWt01Y">
-                Eje
+                  Eje
                 </option>
                 <option className={twClass.inputOption} value="e7EMjmX">
-                Correa 
+                  Correa
                 </option>
                 <option className={twClass.inputOption} value="JIBBU5o">
-                Cojinete
+                  Cojinete
                 </option>
                 <option className={twClass.inputOption} value="dMNIVat">
-                Rodamientos
+                  Rodamientos
                 </option>
                 <option className={twClass.inputOption} value="woKql6T">
-                Caja conexión
+                  Caja conexión
                 </option>
                 <option className={twClass.inputOption} value="Jc3zBUo">
-                Estator
+                  Estator
                 </option>
                 <option className={twClass.inputOption} value="aF5uz8w">
-                Capacitor
+                  Capacitor
                 </option>
                 <option className={twClass.inputOption} value="w6vPzxV">
-                Polea
+                  Polea
                 </option>
                 <option className={twClass.inputOption} value="j4bumLs">
-                Hélice
+                  Hélice
                 </option>
                 <option className={twClass.inputOption} value="8qu7MYr">
-                Motor de arranque
+                  Motor de arranque
                 </option>
                 <option className={twClass.inputOption} value="ZOihmDj">
-                Motor
+                  Motor
                 </option>
                 <option className={twClass.inputOption} value="e59CtWv">
-                Sistema de refrigeración
+                  Sistema de refrigeración
                 </option>
                 <option className={twClass.inputOption} value="BS0o0eC">
-                Regulador de velocidad
-                </option>  
+                  Regulador de velocidad
+                </option>
                 <option className={twClass.inputOption} value="Q16AmgV">
-                Filtro de aire
+                  Filtro de aire
                 </option>
                 <option className={twClass.inputOption} value="s7rvj5j">
-                Filtro de aceite
+                  Filtro de aceite
                 </option>
                 <option className={twClass.inputOption} value="m5ej5ei">
-                Panel de control
+                  Panel de control
                 </option>
                 <option className={twClass.inputOption} value="5B8JJok">
-                Calefactor
+                  Calefactor
                 </option>
                 <option className={twClass.inputOption} value="GvyjPJ1">
                   Válvula
@@ -1307,7 +1348,7 @@ const ContenedorGeneraTag = () => {
             </div>
           )}
 
-          
+
 
           {showProveedorServicios && (
             <div className="mx-1 my-2 flex flex-col border rounded-xl">
@@ -1322,49 +1363,49 @@ const ContenedorGeneraTag = () => {
                 onChange={(e) => setSelectedProveedorServicios(e.target.value)} // Actualizar el estado cuando cambie
               >
                 <option className={twClass.inputOption} value="3rh0E">
-                No aplica
+                  No aplica
                 </option>
                 <option className={twClass.inputOption} value="&E.qw">
-                Schindler
+                  Schindler
                 </option>
                 <option className={twClass.inputOption} value="CP#HU">
-                Altivert
+                  Altivert
                 </option>
                 <option className={twClass.inputOption} value="YaF9I">
-                Fabrimetal
+                  Fabrimetal
                 </option>
                 <option className={twClass.inputOption} value="U94Z#">
-                Heaven Guard 
+                  Heaven Guard
                 </option>
                 <option className={twClass.inputOption} value="&oPLz">
-                Termofrío
+                  Termofrío
                 </option>
                 <option className={twClass.inputOption} value="tMmY.">
-                Qclass
+                  Qclass
                 </option>
                 <option className={twClass.inputOption} value="vu$vP">
-                Sistemas de frío
+                  Sistemas de frío
                 </option>
                 <option className={twClass.inputOption} value="oXoO-">
-                Ingetrol
+                  Ingetrol
                 </option>
                 <option className={twClass.inputOption} value="&mwtr">
-                Antiflama
+                  Antiflama
                 </option>
                 <option className={twClass.inputOption} value="#U#ne">
-                Isamed
+                  Isamed
                 </option>
                 <option className={twClass.inputOption} value="5#31Y">
-                Instaplan
+                  Instaplan
                 </option>
                 <option className={twClass.inputOption} value="6C9&&">
-                Electro Power
+                  Electro Power
                 </option>
                 <option className={twClass.inputOption} value="w6SR-">
-                Diperk
+                  Diperk
                 </option>
                 <option className={twClass.inputOption} value="G2$gq">
-                Apolo Spa (extintores)
+                  Apolo Spa (extintores)
                 </option>
               </select>
 
@@ -1386,23 +1427,11 @@ const ContenedorGeneraTag = () => {
           )}
 
 
-          
+
 
           {showAuxiliar && (
             <div className="mx-1 my-2 flex flex-col border rounded-xl">
-              {/* <label className="ml-5 mt-4 mb-4 italic text-xl">
-                Auxiliar opcional (recomendado)
-              </label>
-              <input
-                type="text"
-                name="inputAuxiliar"
-                className="border border-slate-400 block w-[14rem] bg-slate-900 text-slate-200 py-1 px-4 mx-auto mb-2 rounded-full"
-                placeholder="Max 20 caracteres"
-                autoFocus
-                maxLength={22}
-                value={selectedAuxiliar} // Establecer el valor seleccionado
-                onChange={(e) => setSelectedAuxiliar(e.target.value)} // Actualizar el estado cuando cambie
-              /> */}
+           
 
               <div className="flex justify-center">
                 <button
@@ -1415,7 +1444,7 @@ const ContenedorGeneraTag = () => {
           )}
 
         </form>
-       
+
 
         <div className="flex h-[12rem] p-10 text-md justify-center items-center text-center border border-slate-300 rounded-xl">
           <span>{codeState}</span>
